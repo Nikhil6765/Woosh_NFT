@@ -1,0 +1,12 @@
+.index-page{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 101%;
+        height: 100%;
+        background: linear-gradient(45deg, #f3f3f3, #fff);
+
+    }
+}
