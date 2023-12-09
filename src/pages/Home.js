@@ -11,6 +11,14 @@ export default function Test() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState("");
 
+  const dummyResponse = {
+    "name": "John Doe",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+    "bio": "This is a dummy bio",
+    "followers": 20,
+    "public_repos": 100
+}
+
 
   function search()  { 
     const apiUrl = `https://api.github.com/users/${username}`;
@@ -22,7 +30,8 @@ export default function Test() {
     
 
     .then((response) => response.json())
-    .then((data) => setUserData(data));}
+    .then((data) => setUserData(dummyResponse));}
+
   
   return (
     <>

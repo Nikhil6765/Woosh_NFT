@@ -31,8 +31,37 @@ const router = createBrowserRouter([
   },
 ]);
 
+const scroll : Chain = {
+  id: 534351,
+  name: 'Scroll',
+  network: 'scroll',
+  iconUrl: 'https://example.com/icon.svg',
+  iconBackground: '#fff',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Scroll',
+    symbol: 'ETH',
+  },
+  rpcUrls: {
+    public: { http: ['https://sepolia-rpc.scroll.io	'] },
+    default: { http: ['https://sepolia-rpc.scroll.io	'] },
+  },
+  blockExplorers: {
+    default: { name: 'ScrollScan', url: 'https://sepolia.scrollscan.com' },
+    etherscan: { name: 'ScrollScan', url: 'https://sepolia.scrollscan.com' },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xf373dfD3d34609286a0F931c009c0b07fC5e8302',
+      blockCreated: 11_907_934,
+    },
+  },
+  testnet: true,
+};
+
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.goerli, chain.arbitrum],
+  
+  [chain.mainnet, chain.polygon, chain.goerli, chain.arbitrum, chain.sepolia,scroll ],
   [
     // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
     publicProvider()
