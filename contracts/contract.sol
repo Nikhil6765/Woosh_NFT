@@ -27,4 +27,3 @@ contract ExampleNFT is ERC721URIStorage, Ownable {
         return newItemId;
     }
 }
-npm start

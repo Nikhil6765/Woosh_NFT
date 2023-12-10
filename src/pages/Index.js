@@ -1,8 +1,16 @@
 import React from "react";
 import "./Index.scss";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import {Test} from "./Home";
+import { writeContract } from "@wagmi/core";
+import { ethers } from "ethers";
+import { useRef, useEffect } from "react";
+
+
+
 
 export default function Index() {
+
   const ConnectWallet = () => {
     alert("Arre bhai, yeh Functionality banana baki hai");
   };
@@ -10,8 +18,12 @@ export default function Index() {
     <div className="index-page">
      <div className="container">
         {/* <ConnectedButton onClick={ConnectWallet} /> */}
-        
-        <a href="/home">Go to Home Page</a>
+        <Test/>
+
+        {/*<a href="/home">Go to Home Page</a> */}
+
+
+        {/* <img className="market" src="/blank.png">  </img> */}
       </div>
     </div>
   );

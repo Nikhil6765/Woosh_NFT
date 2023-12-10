@@ -14,20 +14,25 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import "./App.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { Test } from "./pages/Home";
 import {useEffect, React} from "react";
 import Index from "./pages/Index";
 const{ethers} = require("ethers");
+// import "./pages/Index.scss";
+
+
+
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index/>,
+    element: <Test/>,
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <Test />,
   },
 ]);
 

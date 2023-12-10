@@ -65,11 +65,11 @@ export function Card({ data, username }) {
   const mintNFT = async () => {
     try {
 
-        // Create Canvas into Png and update state for pngImage
-        // Method 1
-        const canvas = canvasRef.current;
-        const pngImage = canvas.toDataURL("image/png");
-        setPngImage(pngImage);
+      // Create Canvas into Png and update state for pngImage
+      // Method 1
+      const canvas = canvasRef.current;
+      const pngImage = canvas.toDataURL("image/png");
+      setPngImage(pngImage);
 
 
 
@@ -657,22 +657,22 @@ export function Card({ data, username }) {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       await provider.getNetwork();  // Wait for the network to be available
       const signer = provider.getSigner();
+      console.log(signer)
       const contract = new ethers.Contract(contractAddress, contractABI, signer);
 
-      // /*<img crossorigin="anonymous" /> */
+      
 
+      //  Call the mint function on the smart contract
+      const transaction = await contract.mintNFT("0x7c2568868da818FF1Ef9EeB1c34e7eCe310c29fd","ipfs://bafybeiglpcgqqnrdiv2z4gqlxv2blw7qjs4zq2m5xsayfupiccbyplfnfu/image.png");
 
-      // Call the mint function on the smart contract
-      const transaction = await contract.mintNFT("0xDE58E233a1226D8D9a06206b18E48F51588c7Ae3","1");
-
-       // Get the transaction hash
+      // Get the transaction hash
       
       const transactionHash = transaction.hash;
-      // Log the transaction hash to the console
+       // Log the transaction hash to the console
       
       console.log("Transaction Hash:", transactionHash);
        // Wait for the transaction to be mined
-      await transaction.wait();
+       await transaction.wait();
 
       console.log("NFT minted successfully!");
       
@@ -687,8 +687,8 @@ export function Card({ data, username }) {
         <a href="#" className="btn btn-mint" onClick={mintNFT}>
           Mint NFT
         </a>
-        <canvas ref={canvasRef}></canvas>
-        {/* <img style={{width:150}} src={pngImage} alt="default" /> */}
+        <canvas style={{width:300}} ref={canvasRef}></canvas>
+        {/* <img style={{width:50}} src={pngImage} alt="default" /> */}
       </div>
     </div>
   );

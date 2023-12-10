@@ -26,7 +26,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;700&display=swap");
 /* Base */
 :root {
-  --clr-primary: #29a396;
+  --clr-primary: #742fb6;
 }
 
 *,
@@ -45,7 +45,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: radial-gradient(#111, #071a1a);
+  background-color: black;
   color: #fff;
   overflow-x: hidden;
 }
@@ -443,7 +443,7 @@ body {
   border-bottom-left-radius : 14px;
   border-top-left-radius : 14px;
   box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.2);
-  border: 2px solid #29a396;
+  border: 2px solid #742fb6;
   color: #fff;
   min-width: 8rem;
 }
@@ -451,7 +451,7 @@ body {
   outline: none;
 }
 .search-btn{
-  background-color:  #29a396;
+  background-color:  #742fb6;
   border: none;
   color: white;
   cursor: pointer;

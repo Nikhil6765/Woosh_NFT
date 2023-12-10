@@ -1,13 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import {Card} from "../components/Card";
-import logo from '../img/logo.png';
-import about from '../img/gitnft-about.jpeg';
+import logo from '../img/woosh.png';
+import about from '../img/gitnft-about.jpg';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 // var About = require('../components/Card').default
 import "./Index.scss";
+import video from './one.gif'
 
-export default function Test() {
+export  function Test() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState("");
 
@@ -30,7 +31,7 @@ export default function Test() {
     
 
     .then((response) => response.json())
-    .then((data) => setUserData(dummyResponse));}
+    .then((data) => setUserData(data));}
 
   
   return (
@@ -47,7 +48,7 @@ export default function Test() {
             <ion-icon name="grid" />
           </div>
           <div className="logo">
-            <img
+            <img style={{width:200}}
               src={logo}
               alt="LOGO"
             />
@@ -61,13 +62,13 @@ export default function Test() {
         <div className="container flex">
           <div className="text">
             <h1 className="mb">
-              Get Your First <br />
-              <span>NFT</span> By Us
+              Let Your 
+              <span> NFT</span><br/> Talk for Yaa!
             </h1>
             <p className="mb">
-              Hey Anon 👋! <br />
-              Introducing GitNFT based on your github stats. <br />
-              Get Your First NFT and show it off to the World.
+              Hello there, fellow explorer! 👋<br/>
+              Unveiling WooshNFT, a unique fusion of art and your GitHub journey. 🚀<br/>
+              Embark on a quest to claim your very first NFT and showcase it proudly to the world
             </p>
             {/* sir ka likha coad starts*/}
            
@@ -101,10 +102,14 @@ export default function Test() {
             {/* search option ka alt khatam */}
           </div>
           <div className="visual">
-            <img
+            {/* <img
               src="https://github.githubassets.com/images/modules/site/home-campaign/astrocat.png?width=480&format=webpll"
               alt=""
-            />
+            /> */}
+            <>
+            <img style={{height:600}}src={video}/>
+</>
+
           </div>
         </div>
       </header>
@@ -141,45 +146,19 @@ export default function Test() {
           <div className="container flex">
             <div className="trainer">
               
-              <h3 className="secondary mb">Divyanshu Urmaliya</h3>
+              <h3 className="secondary mb">Nikhil Sondhiya</h3>
               <p className="tertiary mb">
-                I worked on Blockend side of this project.
+                Blockchain Developer
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
               </a>
             </div>
+            
             <div className="trainer">
-              <h3 className="secondary mb">Sumit Choudhary</h3>
+              <h3 className="secondary mb"> Atharv Shrivastav</h3>
               <p className="tertiary mb">
-              I worked on Frontend side of this project.
-              </p>
-              <a href="#" className="btn-2">
-                <ion-icon name="arrow-redo-circle-outline" />
-              </a>
-            </div>
-            <div className="trainer">
-              <h3 className="secondary mb">Harsh Vishwakarma</h3>
-              <p className="tertiary mb">
-              I worked on Design side of this project.
-              </p>
-              <a href="#" className="btn-2">
-                <ion-icon name="arrow-redo-circle-outline" />
-              </a>
-            </div>
-            <div className="trainer">
-              <h3 className="secondary mb">Aman Kushwaha</h3>
-              <p className="tertiary mb">
-              I worked on Integration side of this project.
-              </p>
-              <a href="#" className="btn-2">
-                <ion-icon name="arrow-redo-circle-outline" />
-              </a>
-            </div>
-            <div className="trainer">
-              <h3 className="secondary mb">Ankur Gupta</h3>
-              <p className="tertiary mb">
-              I worked on  Integration side of this project.
+                Frontend Developer
               </p>
               <a href="#" className="btn-2">
                 <ion-icon name="arrow-redo-circle-outline" />
