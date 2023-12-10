@@ -31,7 +31,7 @@ export  function Test() {
     
 
     .then((response) => response.json())
-    .then((data) => setUserData(data));}
+    .then((data) => setUserData(dummyResponse));}
 
   
   return (
@@ -66,7 +66,6 @@ export  function Test() {
               <span> NFT</span><br/> Talk for Yaa!
             </h1>
             <p className="mb">
-              Hello there, fellow explorer! 👋<br/>
               Unveiling WooshNFT, a unique fusion of art and your GitHub journey. 🚀<br/>
               Embark on a quest to claim your very first NFT and showcase it proudly to the world
             </p>
@@ -127,13 +126,13 @@ export  function Test() {
                 About
               </h2>
               <p className="tertiary mb">
-                The main thing we want from you is to have fun using this Website.
+                Our mission is to transform your online experience into a thrilling Web3 adventure.
               </p>
               <p className="tertiary mb">
-                We want to onboard more and more frens to Web3 via our Dapp.
+                WooshNFT promises an experience designed exclusively with your interests and preferences in mind.
               </p>
               <p className="tertiary mb">
-                Enter your github username and we make something for you!
+                Dive into Web3 with us, where we make the experience accessible, enjoyable, and uniquely yours!
               </p>
 
             </div>
